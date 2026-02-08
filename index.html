@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestNep | Secure Investment Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">Invest<span>Nep</span></div>
+            <ul>
+                <li class="active" onclick="showSection('dashboard')"><i class="fas fa-home"></i> Dashboard</li>
+                <li onclick="showSection('plans')"><i class="fas fa-chart-line"></i> Investment Plans</li>
+                <li onclick="showSection('wallet')"><i class="fas fa-wallet"></i> Wallet & Withdraw</li>
+                <li><i class="fas fa-users"></i> Referrals</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <h1>Welcome, Investor</h1>
+                <div class="user-profile">
+                    <span id="balance-display">Balance: Rs. 0.00</span>
+                    <button class="logout-btn">Logout</button>
+                </div>
+            </header>
+
+            <section id="dashboard" class="content-section">
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>Total Invested</h3><p id="total-invested">Rs. 0</p></div>
+                    <div class="stat-card"><h3>Total Profit</h3><p id="total-profit">Rs. 0</p></div>
+                    <div class="stat-card"><h3>Active Plans</h3><p id="active-plans">0</p></div>
+                </div>
+                
+            </section>
+
+            <section id="plans" class="content-section" style="display:none;">
+                <h2>Investment Packages</h2>
+                <div class="plans-grid" id="plans-container">
+                    </div>
+            </section>
+
+            <section id="wallet" class="content-section" style="display:none;">
+                <h2>Wallet Management</h2>
+                <div class="payment-methods">
+                    <button class="pay-btn esewa">Deposit via eSewa</button>
+                    <button class="pay-btn khalti">Deposit via Khalti</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
